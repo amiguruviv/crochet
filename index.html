@@ -29,43 +29,60 @@
         <div class="grid" id="grid"></div>
         <script>
             const articles = [
-                { name: "Raie",                   price: "8€" ,    image: "images/stingray.jpg",         username: "@theresascrochetshop",link_author: "https://www.instagram.com/theresascrochetshop",     link_pattern: "https://youtu.be/0FyWso2WaMI?si=73kDRPiSIWpZw4YK"                                   , duration: "45min"},
-                { name: "Limace de mer",          price: "22€",    image: "images/seaslug.png",          username: "@pomsandposies",      link_author: "https://www.instagram.com/pomsandposies/",          link_pattern: "https://www.etsy.com/fr/listing/1672869150/modele-amigurumi-nudibranche-dorid-motif", duration: "1h45" },
-                { name: "Lot 3 limaces de mer",   price: "56€",    image: "images/slug_bundle.jpg",      username: "@pomsandposies",      link_author: "https://www.instagram.com/pomsandposies/",          link_pattern: "https://www.etsy.com/fr/listing/1672869150/modele-amigurumi-nudibranche-dorid-motif", duration: "1h45" },
-                { name: "Hérisson",               price: "20€",    image: "images/hedgehog.jpg",         username: "@wai.crochets",       link_author: "https://www.instagram.com/waicrochets/",            link_pattern: "https://ko-fi.com/s/d2c1a2ac8a"                                                     , duration: "1h40" },
-                { name: "Axolotl",                price: "22€",    image: "images/axolotl_small.jpg",    username: "@cuteville_toys",     link_author: "https://www.instagram.com/cuteville_toys/",         link_pattern: "https://www.etsy.com/fr/listing/4322068334/patron-au-crochet-axolotl-peluche"       , duration: "2h"   },
-                { name: "Grenouille",             price: "12€",    image: "images/frog.jpg",             username: "@crochetbyktc",       link_author: "https://www.instagram.com/crochetbyktc/",           link_pattern: "https://www.etsy.com/fr/listing/1774371171/motif-au-crochet-fabian-la-grenouille"   , duration: "1h10" },
-                { name: "Calamar",                price: "22€",    image: "images/squid.jpg",            username: "@plushico_patterns",  link_author: "https://www.instagram.com/plushico_patterns/",      link_pattern: "https://www.etsy.com/fr/listing/1669123092/patron-du-calamar-en-crochet-pas-de"     , duration: "2h"   },
-                { name: "Brontosaure",            price: "28€",    image: "images/brontosaurus.png",     username: "knot too shabby",     link_author: "https://www.etsy.com/shop/knottooshabbycrochet",    link_pattern: "https://www.etsy.com/fr/listing/523196760/patron-patron-amigurumi-sans-couture"     , duration: "2h30" },
-                { name: "Chauve-souris",          price: "45€",    image: "images/bat.png",              username: "@_sassaroo",          link_author: "https://www.instagram.com/_sassaroo/",              link_pattern: "https://www.etsy.com/fr/listing/733732024/modele-chauve-souris-au-crochet-modele"   , duration: "4h20" },
-                { name: "T-rex",                  price: "56€",    image: "images/Trex.jpg",             username: "@bluephonestudios",   link_author: "https://www.instagram.com/bluephonestudios/",       link_pattern: "https://www.etsy.com/fr/listing/126495488/modele-au-crochet-timothee-le-t-rex"      , duration: "4h20" },
-                { name: "Méduse",                 price: "17€",    image: "images/jellyfish.jpg",        username: "@cora._.crochet",     link_author: "https://www.instagram.com/cora._.crochet",          link_pattern: "https://www.instagram.com/p/CS2jg0unpPV/"                                           , duration: "1h15" },
-                { name: "Poney",                  price: "30€",    image: "images/poney.jpg",            username: "@cuteville_toys",     link_author: "https://www.instagram.com/cuteville_toys/",         link_pattern: "https://www.etsy.com/fr/listing/4310934429/lot-de-motifs-au-crochet-petits-poneys"  , duration: "2h40" },
-                { name: "Tortue",                 price: "??€",    image: "images/turtles.png",          username: "@allfromjade",        link_author: "https://www.instagram.com/allfromjade/",            link_pattern: "https://www.etsy.com/fr/listing/1309180777/crochet-patterns-the-spider-family"      , duration: "???"  },
-                { name: "Poulpe",                 price: "??€",    image: "images/octopus_medium.jpg",   username: "@allfromjade",        link_author: "https://www.instagram.com/allfromjade/",            link_pattern: "https://www.etsy.com/fr/listing/1760661079/no-sew-crochet-pattern-paula-the-octopus", duration: "1h20" },
-                { name: "Araignée",               price: "??€",    image: "images/spider_B.jpg",         username: "@crochetstudiousart", link_author: "https://www.instagram.com/crochetstudiousart/",     link_pattern: "https://www.etsy.com/fr/listing/4324816052/lot-de-motifs-au-crochet-fruitie-spiders", duration: "3h50" },
-                { name: "Grande Araignée",        price: "??€",    image: "images/spider.png",           username: "@allfromjade",        link_author: "https://www.instagram.com/allfromjade/",            link_pattern: "https://www.etsy.com/fr/listing/1309180777/crochet-patterns-the-spider-family"      , duration: "???"  },
-                { name: "Caméléon",               price: "??€",    image: "images/chameleon.png",        username: "@duendedeloshilos",   link_author: "https://www.instagram.com/duendedeloshilos/",       link_pattern: "https://duendedeloshilos.es/producto/patron-camaleon-amigurumi/"                    , duration: "???"  },
-                { name: "Tricératops",            price: "??€",    image: "images/triceratops.png",      username: "@crochetbykelsie",    link_author: "https://www.instagram.com/crochetbykelsie/",        link_pattern: "https://www.etsy.com/fr/listing/1777081022/patron-triceratops-modele-dinosaure"     , duration: "3h30" },
-                { name: "Lapin",                  price: "??€",    image: "images/bunny.png",            username: "@cute_bunny_co",      link_author: "https://www.instagram.com/cute_bunny_co/",          link_pattern: "https://www.etsy.com/fr/listing/4357478537/patron-au-crochet-floppy-bunny-peluche"  , duration: "???"  },
-                { name: "Vache",                  price: "??€",    image: "images/cow.jpg",              username: "@rin.meow21",         link_author: "https://www.instagram.com/rin.meow21/",             link_pattern: "https://www.etsy.com/fr/listing/1052461006/modele-au-crochet-2-en-1-vache-laitiere" , duration: "3h40" },
-                { name: "Axolotl cute",           price: "??€",    image: "images/axolotl.png",          username: "@decrochetbysisters", link_author: "https://www.instagram.com/decrochetbysisters/",     link_pattern: "https://www.etsy.com/fr/listing/1615197603/modele-au-crochet-axolotl-guide-facile"  , duration: "3h"   },
-                { name: "Poulpe cute",            price: "??€",    image: "images/octopus_cute.png",     username: "@allfromjade",        link_author: "https://www.instagram.com/allfromjade/",            link_pattern: "https://www.etsy.com/fr/listing/1572613943/no-sew-crochet-patterns-bundle-pack"     , duration: "???"  },
-                { name: "Bébé poulpe",            price: "5€" ,    image: "images/octopus_baby.png",     username: "@allfromjade",        link_author: "https://www.instagram.com/allfromjade/",            link_pattern: "https://youtu.be/04A38l61RZM?si=ScYhm9jYLQAKt0at"                                   , duration: "25min"},
-                { name: "Bébé méduse",            price: "5€" ,    image: "images/jellyfish_baby.png",   username: "@allfromjade",        link_author: "https://www.instagram.com/allfromjade/",            link_pattern: "https://youtu.be/oOvuxXzPyzg?si=jTVe7PA3tttBU-dG"                                   , duration: "???"  },
-                { name: "Chat",                   price: "??€",    image: "images/cat.png",              username: "@littlehand_crochet", link_author: "https://www.instagram.com/littlehand_crochet/",     link_pattern: "https://littlehandcrochet.com/collections/cat-kingdom"                              , duration: "???"  },
-                { name: "Abeille",                price: "??€",    image: "images/bee.png",              username: "@theLoveOfCatsEtsy",  link_author: "https://www.instagram.com/theloveofcatsetsy/",      link_pattern: "https://www.etsy.com/fr/listing/954479616/motif-dabeille-au-crochet-numerique"      , duration: "???"  }
+                { name: "Raie",                   price: "8€" ,    images: ["images/stingray.jpg"],         username: "@theresascrochetshop",link_author: "https://www.instagram.com/theresascrochetshop",     link_pattern: "https://youtu.be/0FyWso2WaMI?si=73kDRPiSIWpZw4YK"                                   , duration: "45min"},
+                { name: "Limace de mer",          price: "22€",    images: ["images/seaslug.jpg", 
+                                                                            "images/seaslug1.jpg", 
+                                                                            "images/seaslug2.jpg",
+                                                                            "images/seaslug3.jpg"],         username: "@pomsandposies",      link_author: "https://www.instagram.com/pomsandposies/",          link_pattern: "https://www.etsy.com/fr/listing/1672869150/modele-amigurumi-nudibranche-dorid-motif", duration: "1h45" },
+                { name: "Lot 3 limaces de mer",   price: "56€",    images: ["images/slug_bundle1.jpg",
+                                                                            "images/slug_bundle.jpg", 
+                                                                            "images/slug_bundle2.jpg"],     username: "@pomsandposies",      link_author: "https://www.instagram.com/pomsandposies/",          link_pattern: "https://www.etsy.com/fr/listing/1672869150/modele-amigurumi-nudibranche-dorid-motif", duration: "1h45" },
+                { name: "Hérisson",               price: "20€",    images: ["images/hedgehog.jpg"],         username: "@wai.crochets",       link_author: "https://www.instagram.com/waicrochets/",            link_pattern: "https://ko-fi.com/s/d2c1a2ac8a"                                                     , duration: "1h40" },
+                { name: "Méduse",                 price: "17€",    images: ["images/jellyfish.jpg"],        username: "@cora._.crochet",     link_author: "https://www.instagram.com/cora._.crochet",          link_pattern: "https://www.instagram.com/p/CS2jg0unpPV/"                                           , duration: "1h15" },
+                { name: "Axolotl",                price: "22€",    images: ["images/axolotl_small.jpg"],    username: "@cuteville_toys",     link_author: "https://www.instagram.com/cuteville_toys/",         link_pattern: "https://www.etsy.com/fr/listing/4322068334/patron-au-crochet-axolotl-peluche"       , duration: "2h"   },
+                { name: "Calamar",                price: "22€",    images: ["images/squid.jpg"],            username: "@plushico_patterns",  link_author: "https://www.instagram.com/plushico_patterns/",      link_pattern: "https://www.etsy.com/fr/listing/1669123092/patron-du-calamar-en-crochet-pas-de"     , duration: "2h"   },
+                { name: "Brontosaure",            price: "28€",    images: ["images/brontosaurus.png",
+                                                                            "images/brontosaurus1.jpg", 
+                                                                            "images/brontosaurus2.jpg"],    username: "knot too shabby",     link_author: "https://www.etsy.com/shop/knottooshabbycrochet",    link_pattern: "https://www.etsy.com/fr/listing/523196760/patron-patron-amigurumi-sans-couture"     , duration: "2h30" },
+                { name: "Grenouille",             price: "12€",    images: ["images/frog.jpg"],             username: "@crochetbyktc",       link_author: "https://www.instagram.com/crochetbyktc/",           link_pattern: "https://www.etsy.com/fr/listing/1774371171/motif-au-crochet-fabian-la-grenouille"   , duration: "1h10" },
+                { name: "Chauve-souris",          price: "45€",    images: ["images/bat.png",
+                                                                            "images/bat_kiwi.jpg",
+                                                                            "images/bat_trans.png"],        username: "@_sassaroo",          link_author: "https://www.instagram.com/_sassaroo/",              link_pattern: "https://www.etsy.com/fr/listing/733732024/modele-chauve-souris-au-crochet-modele"   , duration: "4h20" },
+                { name: "T-rex",                  price: "56€",    images: ["images/Trex.jpg"],             username: "@bluephonestudios",   link_author: "https://www.instagram.com/bluephonestudios/",       link_pattern: "https://www.etsy.com/fr/listing/126495488/modele-au-crochet-timothee-le-t-rex"      , duration: "4h20" },
+                { name: "Poney",                  price: "30€",    images: ["images/poney.jpg"],            username: "@cuteville_toys",     link_author: "https://www.instagram.com/cuteville_toys/",         link_pattern: "https://www.etsy.com/fr/listing/4310934429/lot-de-motifs-au-crochet-petits-poneys"  , duration: "2h40" },
+                { name: "Tortue",                 price: "??€",    images: ["images/turtles.png"],          username: "@allfromjade",        link_author: "https://www.instagram.com/allfromjade/",            link_pattern: "https://www.etsy.com/fr/listing/1309180777/crochet-patterns-the-spider-family"      , duration: "???"  },
+                { name: "Poulpe",                 price: "??€",    images: ["images/octopus_medium.jpg"],   username: "@allfromjade",        link_author: "https://www.instagram.com/allfromjade/",            link_pattern: "https://www.etsy.com/fr/listing/1760661079/no-sew-crochet-pattern-paula-the-octopus", duration: "1h20" },
+                { name: "Araignée",               price: "??€",    images: ["images/spider_B.jpg"],         username: "@crochetstudiousart", link_author: "https://www.instagram.com/crochetstudiousart/",     link_pattern: "https://www.etsy.com/fr/listing/4324816052/lot-de-motifs-au-crochet-fruitie-spiders", duration: "3h50" },
+                { name: "Grande Araignée",        price: "80€",    images: ["images/spider.png",
+                                                                            "images/spider1.jpg",
+                                                                            "images/spider2.jpg"],          username: "@allfromjade",        link_author: "https://www.instagram.com/allfromjade/",            link_pattern: "https://www.etsy.com/fr/listing/1309180777/crochet-patterns-the-spider-family"      , duration: "???"  },
+                { name: "Caméléon",               price: "55€",    images: ["images/chameleon.png"],        username: "@duendedeloshilos",   link_author: "https://www.instagram.com/duendedeloshilos/",       link_pattern: "https://duendedeloshilos.es/producto/patron-camaleon-amigurumi/"                    , duration: "???"  },
+                { name: "Tricératops",            price: "34€",    images: ["images/triceratops.png"],      username: "@crochetbykelsie",    link_author: "https://www.instagram.com/crochetbykelsie/",        link_pattern: "https://www.etsy.com/fr/listing/1777081022/patron-triceratops-modele-dinosaure"     , duration: "3h30" },
+                { name: "Lapin",                  price: "40€",    images: ["images/bunny.png"],            username: "@cute_bunny_co",      link_author: "https://www.instagram.com/cute_bunny_co/",          link_pattern: "https://www.etsy.com/fr/listing/4357478537/patron-au-crochet-floppy-bunny-peluche"  , duration: "???"  },
+                { name: "Vache",                  price: "34€",    images: ["images/cow.jpg"],              username: "@rin.meow21",         link_author: "https://www.instagram.com/rin.meow21/",             link_pattern: "https://www.etsy.com/fr/listing/1052461006/modele-au-crochet-2-en-1-vache-laitiere" , duration: "3h40" },
+                { name: "Axolotl cute",           price: "34€",    images: ["images/axolotl.png"],          username: "@decrochetbysisters", link_author: "https://www.instagram.com/decrochetbysisters/",     link_pattern: "https://www.etsy.com/fr/listing/1615197603/modele-au-crochet-axolotl-guide-facile"  , duration: "3h"   },
+                { name: "Poulpe cute",            price: "??€",    images: ["images/octopus_cute.png"],     username: "@allfromjade",        link_author: "https://www.instagram.com/allfromjade/",            link_pattern: "https://www.etsy.com/fr/listing/1572613943/no-sew-crochet-patterns-bundle-pack"     , duration: "???"  },
+                { name: "Bébé poulpe",            price: "5€" ,    images: ["images/octopus_baby.png"],     username: "@allfromjade",        link_author: "https://www.instagram.com/allfromjade/",            link_pattern: "https://youtu.be/04A38l61RZM?si=ScYhm9jYLQAKt0at"                                   , duration: "25min"},
+                { name: "Bébé méduse",            price: "5€" ,    images: ["images/jellyfish_baby.png"],   username: "@allfromjade",        link_author: "https://www.instagram.com/allfromjade/",            link_pattern: "https://youtu.be/oOvuxXzPyzg?si=jTVe7PA3tttBU-dG"                                   , duration: "???"  },
+                { name: "Chat",                   price: "??€",    images: ["images/cat.png"],              username: "@littlehand_crochet", link_author: "https://www.instagram.com/littlehand_crochet/",     link_pattern: "https://littlehandcrochet.com/collections/cat-kingdom"                              , duration: "???"  },
+                { name: "Abeille",                price: "??€",    images: ["images/bee.png"],              username: "@theLoveOfCatsEtsy",  link_author: "https://www.instagram.com/theloveofcatsetsy/",      link_pattern: "https://www.etsy.com/fr/listing/954479616/motif-dabeille-au-crochet-numerique"      , duration: "???"  }
                 ];
             const grid = document.getElementById("grid");
+
             articles.forEach(a => {
+                const multi = a.images.length > 1;
+                const carouselHTML = `
+                    <div class="card-image carousel">
+                        <img class="carousel-img" src="${a.images[0]}" alt="${a.name}" data-images='${JSON.stringify(a.images)}' data-index="0">
+                        ${multi ? `<button class="btn-prev">‹</button><button class="btn-next">›</button>` : ""}
+                    </div>`;
+
                 grid.innerHTML += `
                     <div class="card">
                         <div class="card-top">
-                                <span class="card-name">${a.name}</span>
+                            <span class="card-name">${a.name}</span>
                         </div>
-                        <div class="card-image">
-                            <img src="${a.image}" alt="${a.name}">
-                        </div>
+                        ${carouselHTML}
                         <div class="card-content">
                             <div class="card-middle">
                                 <a href="${a.link_author}" target="_blank">${a.username}</a>
@@ -75,8 +92,18 @@
                                 <span>Prix : ${a.price}</span>
                             </div>
                         </div>
-                    </div>
-                `;
+                    </div>`;
+            });
+
+            document.querySelector(".grid").addEventListener("click", e => {
+                const btn = e.target.closest(".btn-prev, .btn-next");
+                if (!btn) return;
+                const img = btn.closest(".carousel").querySelector(".carousel-img");
+                const images = JSON.parse(img.dataset.images);
+                let i = parseInt(img.dataset.index);
+                i = btn.classList.contains("btn-next") ? (i + 1) % images.length : (i - 1 + images.length) % images.length;
+                img.src = images[i];
+                img.dataset.index = i;
             });
         </script>
         <!-- Add this under the card name if I want to add the duration
